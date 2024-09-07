@@ -17,10 +17,14 @@
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <!-- Include WebChat library -->
+  <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/dist/webchat.min.js"></script>
+  
   <script>
     (function() {
       window.WebChat.default.init({
-        selector: "#webchat",
+        selector: "body", // Adjust as needed
         initPayload: "/get_started",
         customData: {"language": "en"}, // arbitrary custom data
         socketUrl: "http://localhost:5005",
@@ -30,7 +34,6 @@
       });
     })();
   </script>
-  
 </head>
 
 <body>
