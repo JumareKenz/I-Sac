@@ -7,29 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="mobile-web-app-capable" content="yes" />
   <link rel="icon" type="image/png" href="assets/iaiict2.png" />
-  <!-- Use the latest WebChat library from jsDelivr -->
-  <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@latest/dist/webchat.min.js"></script>
-  <script>
-    (function() {
-      if (window.WebChat) {
-        console.log("WebChat library loaded successfully.");
-        window.WebChat.default.init({
-          selector: "#webchat",
-          initPayload: "/get_started",
-          customData: {"language": "en"},
-          socketUrl: "http://localhost:5005",
-          socketPath: "/socket.io/",
-          title: "Rasa Chatbot",
-          subtitle: "Powered by Rasa"
-        });
-      } else {
-        console.error("WebChat library not loaded.");
-      }
-    })();
-  </script>
 </head>
 <body>
-  <h1>Testing WebChat</h1>
-  <div id="webchat"></div>
+  <h1>Testing App-Root</h1>
+  <app-root></app-root>
 </body>
 </html>
