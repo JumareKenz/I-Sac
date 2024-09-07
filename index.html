@@ -7,36 +7,12 @@
 
   <base href="/" />
 
-  <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
-
-  <link rel="icon" type="image/png" href="assets/iaiict2.png" />
-
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  <!-- Include WebChat library -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/dist/webchat.min.js"></script>
-  
-  <script>
-    (function() {
-      window.WebChat.default.init({
-        selector: "body", // Adjust as needed
-        initPayload: "/get_started",
-        customData: {"language": "en"}, // arbitrary custom data
-        socketUrl: "http://localhost:5005",
-        socketPath: "/socket.io/",
-        title: "Rasa Chatbot",
-        subtitle: "Powered by Rasa"
-      });
-    })();
-  </script>
 </head>
 
 <body>
+  <h1>Hello World!</h1>
   <app-root></app-root>
 </body>
 
