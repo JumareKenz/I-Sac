@@ -1,0 +1,110 @@
+version: '3.1'
+intents:
+- academic_resources
+- affirm
+- bot_challenge
+- course_details
+- deny
+- goodbye
+- greet
+- institute_information
+- instructors
+- prospective_students
+- study_buddy
+- timetable_details
+- thank_you
+- how_are_you
+entities:
+- course_code
+- day
+- instructor
+- course_name
+
+
+
+- name: "instructor"
+  type: "regex"
+  pattern: "^(Dr\\.|Prof\\.|Mal\\.|Mrs\\.|Miss\\.|ENGNR\\.|Mr\\.)?\\s*[A-Z][a-z]+\\s[A-Z][a-z]+$"
+  
+slots:
+  course_code:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: course_code
+  course_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: course_name
+  day:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: day
+  instructor:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: instructor
+  institute:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: institute
+  program:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: program
+  student_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: student_type
+responses:
+  utter_greet:
+  - text: Hello there, I'm I-Sac, how can i help you today?
+  - text: Hi, I'm I-Sac, what can I do for you today?
+  - text: Hey, my name is I-Sac, your dedicated Iya Abubakar Student Assistant, how can I be of help?
+  - text: Yoo, Im I-Sac, what do you need today?
+  utter_goodbye:
+  - text: Bye
+  - text: It was nice talking with you, bye
+  - text: Hoping to seeing you soon, it felt soo good helping you!
+  - text: Bye Bye, See you
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Did you find what you were looking for?
+  - text: Is everything fine now?
+  utter_iamabot:
+  - text: My name is I-Sac which means IYA ABUBAKAR STUDENT ASSISTANT CHATBOT. I am a conversational A.I assistant built for student at Iya Abubakar Institute of ICT. I can help you answer all questions related to the institute whether you are a prospective student or a current student. I was built by Group 12 of D22CSC set and i was managed under the supervision of Mrs.Esther Gabriel Baba .
+  utter_ask_for_clarification:
+  - text: Sorry if i missed that, can you please tell me what you need precisely?
+  utter_thank_you:
+  - text: You're Welcome, I'm always here to help you get all necessary information about IAIICT.
+  utter_how_are_you:
+  - text: I'm fine, thanks for asking
+  
+
+actions:
+- utter_greet
+- utter_how_are_you
+- action_iaiict_info
+- action_prospective_students
+- action_course_details
+- utter_iamabot
+- action_provide_academic_resource
+- action_study_buddy
+- action_timetable_details
+- action_instructor_details
+- action_institute_information
+- action_fallback_response
+- utter_goodbye
+- utter_did_that_help
+- utter_ask_for_clarification
+- utter_thank_you
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

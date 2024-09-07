@@ -1,0 +1,66 @@
+version: "3.1" 
+rules:
+  - rule: Fallback rule
+    steps:
+      - intent: nlu_fallback
+      - action: action_fallback_response
+
+  - rule: Ask for course details help
+    steps:
+      - action: action_course_details
+      - action: utter_did_that_help
+
+  - rule: Ask for timetable help
+    steps:
+      - action: action_timetable_details
+      - action: utter_did_that_help
+
+  - rule: Ask for instructor details help
+    steps:
+      - action: action_instructor_details
+      - action: utter_did_that_help
+
+  - rule: Ask for institute information help
+    steps:
+      - action: action_institute_information
+      - action: utter_did_that_help
+
+  - rule: Ask for prospective students help
+    steps:
+      - action: action_prospective_students
+      - action: utter_did_that_help
+
+  - rule: Ask for study buddy help
+    steps:
+      - action: action_study_buddy
+      - action: utter_did_that_help
+
+  - rule: Ask for academic resources help
+    steps:
+      - action: action_provide_academic_resource
+      - action: utter_did_that_help
+
+  - rule: Ask for IAICT information help
+    steps:
+      - action: action_iaiict_info
+      - action: utter_did_that_help
+
+  - rule: Ask if I'm a bot
+    steps:
+      - action: utter_iamabot
+      - action: utter_did_that_help
+
+  - rule: Handle positive feedback
+    steps:
+      - intent: affirm
+      - action: utter_goodbye
+
+  - rule: Handle negative feedback
+    steps:
+      - intent: deny
+      - action: utter_ask_for_clarification
+
+  - rule: Appreciate
+    steps:
+      - intent: thank_you
+      - action: utter_thank_you

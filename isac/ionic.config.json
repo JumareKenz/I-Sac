@@ -1,0 +1,7 @@
+{
+  "name": "isac",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

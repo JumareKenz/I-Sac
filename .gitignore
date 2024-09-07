@@ -1,0 +1,34 @@
+# Ignore cache directories
+.rasa
+.cache/
+__pycache__/
+
+# Ignore Rasa cache directory
+.rasa/cache/
+
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore logs
+*.log
+
+# Ignore compiled Python files
+*.pyc
+
+
+# Ignore database files (optional, for local testing with SQLite)
+*.db
+# Node modules
+isac/node_modules/
+
+# VSCode settings
+isac/.vscode/
+
+# Angular cache
+isac/.angular/
+
+# Ionic build output
+isac/www/
+

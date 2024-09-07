@@ -1,0 +1,76 @@
+version: "3.1"
+stories:
+- story: happy path
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: Bye path
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: identity
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+    - action: utter_did_that_help
+
+- story: how_are_you
+  steps: 
+    - intent: how_are_you
+    - action: utter_how_are_you    
+
+- story: user asks for academic resources
+  steps:
+    - intent: academic_resources
+    - action: action_provide_academic_resource
+    - action: utter_did_that_help
+
+- story: user asks for course details
+  steps:
+    - intent: course_details
+    - action: action_course_details
+    - action: utter_did_that_help
+
+- story: user asks for timetable details
+  steps:
+    - intent: timetable_details
+    - action: action_timetable_details
+    - action: utter_did_that_help
+
+- story: user asks about instructors
+  steps:
+    - intent: instructors
+    - action: action_instructor_details
+    - action: utter_did_that_help
+
+- story: user inquires about institute information
+  steps:
+    - intent: institute_information
+    - action: action_iaiict_info
+    - action: utter_did_that_help
+
+- story: user inquires about study tips or quiz
+  steps:
+    - intent: study_buddy
+    - action: action_study_buddy
+    - action: utter_did_that_help
+
+- story: user inquires about how to apply
+  steps:
+    - intent: prospective_students
+    - action: action_prospective_students
+    - action: utter_did_that_help
+
+- story: user inquires about institute information
+  steps:
+    - intent: institute_information
+    - action: action_iaiict_info
+    - action: utter_did_that_help
+
+- story: thank you
+  steps:
+    - intent: thank_you
+    - action: utter_thank_you   
+

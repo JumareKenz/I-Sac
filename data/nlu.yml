@@ -1,0 +1,224 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+- intent: goodbye
+  examples: |
+    - good bye
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what are you?
+    - what is your name?
+- intent: course_details
+  examples: |
+    - what is the course title for [DCS110](course_code)?
+    - how many credit units is [DCS203](course_code)?
+    - which department is offering [DCS110](course_code)?
+    - i need the description for [DCS205](course_code)?
+    - give me the course outline for [DCS107](course_code)
+    - tell me more about [DCE110](course_code)
+    - which course is [course_name](course_name)
+    - what is the course title for [DCS111](course_code)?
+    - tell me more about [DCE110](course_code)?
+    - what is [DCS103](course_code) course title?
+    - how many credit units is [DCE203](course_code)?
+    - which department is [DCS2081](course_code)?
+    - what is the course decription for [DCS208](course_code)?
+    - what is the outline for [DCS208](course_code)?
+    - how do i do course registration?
+    - how can i do course registration?
+- intent: timetable_details
+  examples: |
+    - when is [DCE110](course_code) holding?
+    - where is the venue for [DCS203](course_code)?
+    - when do i have [DCS107](course_code) this week?
+    - whats my timetable for [monday](day)?
+    - show me my timetable
+    - what is my schedule for [today](day)?
+    - when is [DCS200](course_code) taking place?
+    - when is [DCE111](course_code) holding?
+    - when do i have [DCS107](course_code)?
+    - what is my class schedule for this week?
+    - what is my schedule for [DCS107](course_code) this week?
+    - how many times do i have [DCS103](course_code) this week?
+    - what is my schedule for the week?
+    - how many times do i have [DCE201](course_code) this week?
+    - what do i have on [Wednesday](day)?
+
+- lookup: day
+  examples: |
+    - monday
+    - tuesday
+    - wednesday
+    - thursday
+    - friday 
+    - saturday
+    - sunday
+
+- intent: academic_resources
+  examples: |
+    - where can i find lecture notes for [DCS107](course_code)?
+    - can you help me with [DCS200](course_code) lecture notes
+    - i need [course_name](course_name) handout
+    - give me the handout for [DCE111](course_code)
+    - i need pq for [DCS210](course_code)
+    - where can i get [DCS111](course_code) pq
+    - help me with [DCS210](course_code)pq
+    - i need [DCE105](course_code) handout
+    - i need [DCS103](course_code) tutorials
+- intent: study_buddy
+  examples: |
+    - help me study for [DCS107](course_code) exams
+    - i need [DCS110](course_code) quiz
+    - help me test my knowledge on [DCS111](course_code)
+    - please i need study advice
+    - advice me on how to study effectively
+    - how can i pass all my exams
+    - lets play with [DCE111](course_code)
+    - i need study advice
+    - i need [DCE103](course_code) quiz
+- intent: instructors
+  examples: |
+    - who is the lecturer for [DCS110](course_code)?
+    - who is [ENGNR. ABDULWAHAB IBRAHIM](instructor)?
+    - who is taking [DCE111](course_code)?
+    - how can i contact [DCS210](course_code) lecturer?
+    - where can i find [DCS200](course_code) lecturer?
+    - who is teaching [DCS111](course_code)?
+    - help me with [DCS107](course_code) lecturer contact
+    - who is taking [DCS101](course_code)?
+    - what is the name of [DCS106](course_code) lecturer?
+    - who is [Dr. Nura Musa](instructor)?
+    - who is [MAL KAMALUDEEN](instructor)?
+    - what is [Mal Elsadiq](instructor) phone number?
+    - what is [MRS. ESTHER GABRIEL BABA](instructor) phone number?
+    - where is [MAL. ELSADIQ](instructor) office?
+    - what is [MAL. BUHARI](instructor) teaching?
+    - where is [MAL NURA DARI](instructor) office?
+
+- lookup: instructor
+  examples: |
+    - MRS. BASSAMA ALHASSAN
+    - MAL. BUHARI
+    - DR. JOSEPHINE ODENGELE
+    - DR. NURA MUSA
+    - MAL. KAMALUDEEN
+    - MAL. MD ABDULLAHI
+    - Mrs. AIGBE PATIENCE
+    - MAL. MUTTAKA JIBRIL
+    - MAL. ABUBAKAR SHUAIBU
+    - MR. FRIDAY YAKUBU
+    - MAL. MAIWADA SHUIABU
+    - MAL. ELSADIQ
+    - MAL. NURA DARI
+    - ENGNR. ABDULWAHAB IBRAHIM
+    - ENGNR. ISYAKU YA’U
+    - MAL. ALIYU NASIR
+    - MRS. HALIMA MUSA
+    - MR. OZIGI ABDULRAZAK
+    - MRS. ESTHER GABRIEL BABA
+
+- intent: institute_information
+  examples: |
+    - tell me about iaiict
+    - where is iaiict?
+    - tell me about the programs offered at iaiict
+    - how much is the school fees in iaiict?
+    - tell me the history of iaiict
+    - who is the director at iaiict?
+    - what does iaiict do?
+    - who is the director of iaiict?
+    - what is the mission of iaiict?
+    - what are the admission requirements for iaiict?
+    - does iaiict provide accommodation?
+    - how does the admission screening process work at iaiict?
+    - can I register late at iaiict?
+    - how can I defer my admission at iaiict?
+    - where can I get course registration counseling at iaiict?
+    - what are the medical facilities available at iaiict?
+    - how is security handled at iaiict?
+    - what are the examination rules at iaiict?
+    - what are the punishments for examination malpractice at iaiict?
+    - how can I get my certificate or transcript from iaiict?
+    - what is the grading system at iaiict?
+    - What facilities are available at the institute?
+    - what is the grading system in iaiict?
+    - what are the examination rules?
+- intent: prospective_students
+  examples: |
+    - how can i be a student at iaiict?
+    - what are the admission requirements at iaiict?
+    - please how can i apply to iaiict?
+    - does iaiict offer scholarships?
+    - how many years does it take to study at iaiict?
+    - when is admission starting?
+    - what is the address for me to apply?
+    - how can i be student of iaiict?
+
+
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks 
+    - i really appreciate 
+    - thank you soo much 
+    - thanks for helping me
+
+
+- intent: how_are_you
+  examples: |
+    - how are you
+    - how you dey
+    - how far
+    - wetin dey sup 
+    - Alaye how far now
+    - are you good?
+    - how are you today?
+    - how do you do
+    - how do you feel
+    - how is today
+    - how today
+    - how is everything
+    - hope you are fine
+    - hope everything is all fine
+    - hope everything is all right
+    - hope you're doing good
+
+
+
